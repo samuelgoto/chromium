@@ -5,7 +5,7 @@
 ## Overview
 
 The Service Manager is a component which large applications like Chromium can
-use support a cross-platform, multi-process, service-oriented,
+use to support a cross-platform, multi-process, service-oriented,
 hyphenated-adjective-laden architecture.
 
 This document covers how to embed
@@ -40,19 +40,18 @@ service launching once MainDelegate supports it.*
 A **service** in this context can be defined as any self-contained body of
 application logic which satisfies *all* of the following constraints:
 
-- It defines a single [implementation](#Implementation) of
-  [`Service`](https://cs.chromium.org/chromium/src/services/service_manager/public/cpp/service.h)
-  to receive interface requests brokered by the
-  Service Manager, and it maintains a connection between this object and the
-  Service Manager using a
-  [`ServiceBinding`](https://cs.chromium.org/chromium/src/services/service_manager/public/cpp/service_binding.h).
+- It defines a single [implementation](#Implementation) of [`Service`](https://cs.chromium.org/chromium/src/services/service_manager/public/cpp/service.h)
+to receive interface requests brokered by the
+Service Manager, and it maintains a connection between this object and the
+Service Manager using a
+[`ServiceBinding`](https://cs.chromium.org/chromium/src/services/service_manager/public/cpp/service_binding.h).
 - Its API surface in from or out to other services is restricted exclusively to
-  [Mojo](/mojo/README.md) interfaces and self-contained client libraries built
-  on those Mojo interfaces. This means no link-time or run-time exposure of
+[Mojo](/mojo/README.md) interfaces and self-contained client libraries built
+on those Mojo interfaces. This means no link-time or run-time exposure of
   the service implementation's internal heap or global state.
 - It defines a [service manifest](#Manifests) to declare how the Service Manager
-  should identify and manage instances of the service, as well as what
-  interfaces are exposed to or required from other services in the system.
+should identify and manage instances of the service, as well as what
+interfaces are exposed to or required from other services in the system.
 
 The Service Manager is responsible for managing the creation and interconnection
 of individual service instances, whether they are embedded within an existing
@@ -80,13 +79,13 @@ related to hardware device capabilities. Some factors which played into this
 decision:
 
 - There was no clear **security** benefit to keeping the features isolated from
-  each other.
+each other.
 - There was no clear **code size** benefit to keeping the features isolated from
-  each other -- environments supporting any one of the device capabilities are
-  fairly likely to support several others and would thus likely include all or
-  most of the smaller services anyway.
+each other -- environments supporting any one of the device capabilities are
+fairly likely to support several others and would thus likely include all or
+most of the smaller services anyway.
 - There isn't really any coupling between the different features in the service,
-  so there would be few **code health** benefits to building separate services.
+ so there would be few **code health** benefits to building separate services.
 
 Given all of the above conditions, opting for a smaller overall number of
 services seems likely to have been the right decision.
@@ -251,6 +250,7 @@ message pipe handle. If you're planning to pass the endpoint around, it's good
 to do this as early as possible (i.e. as soon as you know the intended interface
 type) to benefit from your compiler's type-checking and avoid having to pass
 around both a name and a pipe.
+
 ***
 
 The last piece of our service that we need to lay down is its manifest.
@@ -445,11 +445,13 @@ There are three primary approaches used when testing services, applied in
 varying combinations:
 
 #### Standard Unit-testing
+
 This is ideal for covering details of your service's internal components and
 making sure they operate as expected. There is nothing special here regarding
 services. Code is code, you can unit-test it.
 
 #### Out-of-process End-to-end Tests
+
 These are good for emulating a production environment as closely as possible,
 with your service implementation isolated in a separate process from the test
 (client) code.
