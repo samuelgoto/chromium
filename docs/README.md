@@ -39,6 +39,7 @@ used when committed.
 ## Document Index
 
 ### Checking Out and Building
+
 *   [Linux Build Instructions](linux_build_instructions.md) - Linux
 *   [Mac Build Instructions](mac_build_instructions.md) - MacOS
 *   [Windows Build Instructions](windows_build_instructions.md) - Windows
@@ -64,9 +65,11 @@ used when committed.
     layer
 
 ### Design Docs
+
 *   See [design/README.md](design/README.md)
 
 ### Integrated Development Environment (IDE) Set Up Guides
+
 *   [Android Studio](android_studio.md) - Android Studio for Android builds
 *   [Eclipse for Android](eclipse.md) - Eclipse for Android
 *   [Eclipse for Linux](linux_eclipse_dev.md) - Eclipse for other platforms
@@ -78,11 +81,13 @@ used when committed.
 *   [Atom](atom.md) - Atom multi-platform code editor
 
 ### Git
+
 *   [Git Cookbook](git_cookbook.md) - A collection of git recipes for common
     tasks
 *   [Git Tips](git_tips.md) - More git tips
 
 ### Clang
+
 *   [Clang Compiler](clang.md) - General information on the clang compiler, used
     by default on Mac and Linux
 *   [Clang Tool Refactoring](clang_tool_refactoring.md) - Leveraging clang tools
@@ -102,6 +107,7 @@ used when committed.
     update the clang-format binaries that come with a checkout of Chromium
 
 ### General Development
+
 *   [Code Reviews](code_reviews.md) - Code review requirements and guidelines
 *   [Respectful Code Reviews](cr_respect.md) - A guide for code reviewers
 *   [Respectful Changes](cl_respect.md) - A guide for code authors
@@ -148,6 +154,7 @@ used when committed.
     chrome:// URLs).
 
 ### Testing
+
 *   [Running and Debugging Web Tests](testing/web_tests.md)
 *   [Writing Web Tests](testing/writing_web_tests.md) - Web Tests using
     `content_shell`
@@ -170,6 +177,7 @@ used when committed.
 *   [IPC Fuzzer](ipc_fuzzer.md) - Fuzz testing of Chromium IPC interfaces.
 
 ### GPU-related docs
+
 *   [GPU Pixel Wrangling](gpu/pixel_wrangling.md) - Instructions for GPU
     pixel wrangling (the GPU sheriffing rotation).
 *   [Debugging GPU related code](gpu/debugging_gpu_related_code.md) - Hints for
@@ -180,6 +188,7 @@ used when committed.
     how the bots are maintained.
 
 ### Misc Linux-Specific Docs
+
 *   [Linux Proxy Config](linux_proxy_config.md) - Network proxy sources on Linux
 *   [Debugging SSL on Linux](linux_debugging_ssl.md) - Tips on debugging SSL
     code in Linux
@@ -226,6 +235,7 @@ used when committed.
     hardware video decode codepaths on Linux
 
 ### Misc MacOS-Specific Docs
+
 *   [Using CCache on Mac](ccache_mac.md) - Speed up builds on Mac using ccache
     with clang/ninja
 *   [Cocoa tips and tricks](cocoa_tips_and_tricks.md) - A collection of idioms
@@ -233,6 +243,7 @@ used when committed.
 *   [MacViews Release Plan](ui/views/macviews_release.md)
 
 ### Misc Windows-Specific Docs
+
 *   [Handling cygwin rebaseall failures](cygwin_dll_remapping_failure.md)
 *   [Hacking on ANGLE in Chromium](angle_in_chromium.md) - OpenGL ES 2.0 built
     on top of DirectX
@@ -240,6 +251,7 @@ used when committed.
     multiple dlls to work around toolchain limitations on Windows.
 
 ### Misc Android-Specific Docs
+
 *   [Google Play Services in Chrome for Android](google_play_services.md)
 *   [Accessing C++ Enums in Java](android_accessing_cpp_enums_in_java.md) - How
     to use C++-defined enums in Java code
@@ -267,6 +279,7 @@ used when committed.
     to create dynamic feature modules.
 
 ### Misc iOS-Specific Docs
+
 *   [Continuous Build and Test Infrastructure for Chromium for iOS](ios/infra.md)
 *   [Opening links in Chrome for iOS](ios/opening_links.md) - How to have your
     iOS app open links in Chrome.
@@ -275,13 +288,16 @@ used when committed.
 *   [Running iOS test suites locally](ios/testing.md)
 
 ### Misc Chrome-OS-Specific Docs
+
 *   [Chrome Logging on Chrome OS](chrome_os_logging.md)
 
 ### Misc WebUI-Specific Docs
+
 *   [Creating WebUI Interfaces in components/](webui_in_components.md) How to
     create a new WebUI component in the `components/` directory.
 
 ### Media
+
 *   [Audio Focus Handling](media/audio_focus.md) - How multiple MediaSession
     audio streams interact
 *   [Autoplay of HTMLMediaElements](media/autoplay.md) - How HTMLMediaElements
@@ -295,6 +311,7 @@ used when committed.
     Running the new video decoder performance tests.
 
 ### Accessibility
+
 *   [Accessibility Overview](accessibility/overview.md) - Overview of
     accessibility concerns and approaches in Chromium.
 *   [Accessibility Tests](accessibility/tests.md) - Where to find
@@ -315,9 +332,11 @@ used when committed.
     Chromium on iOS.
 
 ### Memory
+
 *   [Memory Overview](memory/README.md)
 
 ### Memory Infrastructure Timeline Profiling (MemoryInfra)
+
 *   [Overview](memory-infra/README.md)
 *   [GPU Profiling](memory-infra/probe-gpu.md)
 *   [Adding Tracing to a Component](memory-infra/adding_memory_infra_tracing.md)
@@ -327,6 +346,7 @@ used when committed.
 *   [Heap Profiling](memory-infra/heap_profiler.md)
 
 ### Misc
+
 *   [Useful URLs](useful_urls.md) - A collection of links to various tools and
     dashboards
 *   [ERC IRC](erc_irc.md) - Using ERC in EMACS to access IRC
@@ -346,6 +366,7 @@ used when committed.
     directories are determined on all platforms.
 
 ### Mojo &amp; Services
+
 *   [Intro to Mojo &amp; Services](mojo_and_services.md) - Quick introduction
     to Mojo and services in Chromium, with examples
 *   [Mojo API Reference](/mojo/README.md) - Detailed reference documentation for
